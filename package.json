@@ -1,0 +1,31 @@
+{
+	"name": "news-app_rest",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"start": "nodemon server",
+		"server": "nodemon server",
+		"client": "npm start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://contactguri@dev.azure.com/contactguri/News%20App%20REST/_git/News%20App%20REST"
+	},
+	"author": "Guri Sandhu",
+	"license": "ISC",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"config": "^3.2.1",
+		"express": "^4.17.1",
+		"express-validator": "^6.1.1",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^5.6.5",
+		"request": "^2.88.0"
+	},
+	"devDependencies": {
+		"concurrently": "^4.1.1",
+		"nodemon": "^1.19.1"
+	}
+}

@@ -1,0 +1,129 @@
+@import './variables.scss';
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+	background-color: #eaecf1;
+	// font-size: 16px;
+	color: $textColor;
+}
+b {
+	color: darken($textColor, 10%);
+}
+p {
+	margin: 0;
+	font-size: 16px;
+	padding-top: 12px;
+	// color: #677879;
+}
+.center {
+	text-align: center;
+}
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+// container
+.container {
+	max-width: 1170+40px;
+	width: 100%;
+	margin: auto;
+	padding-left: $space;
+	padding-right: $space;
+}
+
+.wrapper {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 30px;
+	padding-right: 30px;
+	&.white {
+		background-color: white;
+	}
+}
+.row{
+	display: flex;
+
+	&:not(:first-child){
+		margin-top: $space;
+	}
+}
+.list{
+	list-style: none;
+	padding:0;
+	margin: 0;
+	li{
+		&:not(:first-child){
+		border-top: 1px solid $borderColor;
+		padding-top: 30px;
+	 }	
+	 &:not(:last-child)	{
+		padding-bottom: 30px;
+	 }
+	}
+}
+
+h1, h2{
+	margin:0;
+}
+.ButtonOne {
+	background-color: $themeColor;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 600;
+	border-radius: 2px;
+	border: none;
+	min-width: 120px;
+	display: inline-block;
+	text-decoration: none;
+	cursor: pointer;
+	&:hover {
+		background-color: darken($themeColor, 10%);
+	}
+	&:disabled {
+		cursor: not-allowed;
+		background-color: lighten($disabledColor, 20%);
+		color: $disabledColor;
+	}
+}
+.flex-between{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.content-area{
+	.ButtonOne{
+		margin-top: $space;
+	}
+}
+@media only screen and (max-width: $xlarge) {
+	.wrapper {
+		padding: 25px;
+	}
+	.container {
+		padding: 0;
+	}
+}
+@media only screen and (max-width: $large) {
+	.wrapper {
+		padding: $space;
+	}
+}
+@media only screen and (max-width: $medium) {
+	.wrapper {
+		padding: 10px;
+		&.white {
+			padding: 40px $space;
+		}
+	}
+}
+@media only screen and (max-width: $small) {
+}
